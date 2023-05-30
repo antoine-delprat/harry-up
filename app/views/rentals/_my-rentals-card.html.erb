@@ -1,6 +1,6 @@
 <div class="cards my-rentals-card" >
   <% @rentals.each do |rental| %>
-    <div class="card-category my-rentals-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url("./db/seeds/accessories/powder.jpg)">
+    <div class="card-category my-rentals-card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(../../db/seeds/accessories/powder.jpg)">
       <%= rental.accessory.name %>
     </div>
   <% end %>
