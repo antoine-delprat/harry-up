@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     resources :rentals, only: [:create]
   end
   namespace :owner do
-    resources :accessories [:create, :new, :index]
+    resources :accessories, only: [:create, :new, :index]
     resources :rentals, only: [:index] do
       member do
         patch :accept

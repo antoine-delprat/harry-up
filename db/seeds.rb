@@ -21,7 +21,7 @@ draco = User.create!(
   password: 'test1234'
 )
 file = File.open(Rails.root.join("db/seeds/users/draco.jpg"))
-draco.photo.attach(io: file, filename: "draco.jpg", content_type: "image/jpeg")
+draco.avatar.attach(io: file, filename: "draco.jpg", content_type: "image/jpeg")
 
 
 cho = User.create!(
@@ -29,33 +29,30 @@ cho = User.create!(
   city: 'New-York',
   hogwarts_house: 'Ravenclaw',
   email: 'cho@hogwarts.com',
-  password: 'test1234',
-  avatar:
+  password: 'test1234'
 )
 file = File.open(Rails.root.join("db/seeds/users/cho.jpg"))
-cho.photo.attach(io: file, filename: "cho.jpg", content_type: "image/jpeg")
+cho.avatar.attach(io: file, filename: "cho.jpg", content_type: "image/jpeg")
 
 amos = User.create!(
   username: 'amos_diggory',
   city: 'Devon',
   hogwarts_house: 'Hufflepuff',
   email: 'amos@hogwarts.com',
-  password: 'test1234',
-  avatar:
+  password: 'test1234'
 )
 file = File.open(Rails.root.join("db/seeds/users/amos.jpg"))
-amos.photo.attach(io: file, filename: "amos.jpg", content_type: "image/jpeg")
+amos.avatar.attach(io: file, filename: "amos.jpg", content_type: "image/jpeg")
 
 manu = User.create!(
   username: 'manu_macron',
   city: 'Paris',
   hogwarts_house: 'Slytherin',
   email: 'manu@hogwarts.com',
-  password: 'test1234',
-  avatar:
+  password: 'test1234'
 )
 file = File.open(Rails.root.join("db/seeds/users/manu.jpg"))
-manu.photo.attach(io: file, filename: "manu.jpg", content_type: "image/jpeg")
+manu.avatar.attach(io: file, filename: "manu.jpg", content_type: "image/jpeg")
 
 puts "Creating accessories..."
 draco_wand = Accessory.create!(
@@ -65,8 +62,8 @@ draco_wand = Accessory.create!(
   price_per_day: 15,
   category: "Wands"
 )
-file = File.open(Rails.root.join("db/seeds/accessories/draco_wand.jpg"))
-draco_wand.photo.attach(io: file, filename: "draco_wand.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/accessories/draco_wand.png"))
+draco_wand.photo.attach(io: file, filename: "draco_wand.png", content_type: "image/png")
 
 voldemort_wand = Accessory.create!(
   owner: draco,
@@ -75,8 +72,8 @@ voldemort_wand = Accessory.create!(
   price_per_day: 50,
   category: "Wands"
 )
-file = File.open(Rails.root.join("db/seeds/accessories/voldemort_wand.jpg"))
-voldemort_wand.photo.attach(io: file, filename: "voldemort_wand.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/accessories/voldemort_wand.png"))
+voldemort_wand.photo.attach(io: file, filename: "voldemort_wand.png", content_type: "image/png")
 
 firebolt = Accessory.create!(
   owner: draco,
@@ -85,8 +82,8 @@ firebolt = Accessory.create!(
   price_per_day: 30,
   category: "Brooms"
 )
-file = File.open(Rails.root.join("db/seeds/accessories/firebolt.jpg"))
-firebolt.photo.attach(io: file, filename: "firebolt.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/accessories/firebolt.webp"))
+firebolt.photo.attach(io: file, filename: "firebolt.webp", content_type: "image/webp")
 
 thestral = Accessory.create!(
   owner: draco,
@@ -105,8 +102,8 @@ nimbus_2000 = Accessory.create!(
   price_per_day: 15,
   category: "Brooms"
 )
-file = File.open(Rails.root.join("db/seeds/accessories/nimbus_2000.jpg"))
-nimbus_2000.photo.attach(io: file, filename: "nimbus_2000.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/accessories/nimbus_2000.webp"))
+nimbus_2000.photo.attach(io: file, filename: "nimbus_2000.webp", content_type: "image/webp")
 
 nimbus_2001 = Accessory.create!(
   owner: cho,
@@ -115,8 +112,8 @@ nimbus_2001 = Accessory.create!(
   price_per_day: 20,
   category: "Brooms"
 )
-file = File.open(Rails.root.join("db/seeds/accessories/nimbus_2001.jpg"))
-nimbus_2001.photo.attach(io: file, filename: "nimbus_2001.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/accessories/nimbus_2001.jpeg"))
+nimbus_2001.photo.attach(io: file, filename: "nimbus_2001.jpeg", content_type: "image/jpeg")
 
 hippogriff = Accessory.create!(
   owner: cho,
@@ -125,8 +122,8 @@ hippogriff = Accessory.create!(
   price_per_day: 150,
   category: "Animals"
 )
-file = File.open(Rails.root.join("db/seeds/accessories/hippogriff.jpg"))
-hippogriff.photo.attach(io: file, filename: "hippogriff.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/accessories/hippogrif.jpg"))
+hippogriff.photo.attach(io: file, filename: "hippogrif.jpg", content_type: "image/jpeg")
 
 cedric_wand = Accessory.create!(
   owner: amos,
@@ -135,8 +132,8 @@ cedric_wand = Accessory.create!(
   price_per_day: 10,
   category: "Wands"
 )
-file = File.open(Rails.root.join("db/seeds/accessories/cedric_wand.jpg"))
-cedric_wand.photo.attach(io: file, filename: "cedric_wand.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/accessories/cedric_wand.png"))
+cedric_wand.photo.attach(io: file, filename: "cedric_wand.png", content_type: "image/png")
 
 silver_arrow = Accessory.create!(
   owner: amos,
@@ -145,8 +142,8 @@ silver_arrow = Accessory.create!(
   price_per_day: 10,
   category: "Brooms"
 )
-file = File.open(Rails.root.join("db/seeds/accessories/silver_arrow.jpg"))
-silver_arrow.photo.attach(io: file, filename: "silver_arrow.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/accessories/silver_arrow.webp"))
+silver_arrow.photo.attach(io: file, filename: "silver_arrow.webp", content_type: "image/webp")
 
 centaur = Accessory.create!(
   owner: amos,
@@ -165,8 +162,8 @@ elder_wand = Accessory.create!(
   price_per_day: 90,
   category: "Wands"
 )
-file = File.open(Rails.root.join("db/seeds/accessories/elder_wand.jpg"))
-elder_wand.photo.attach(io: file, filename: "elder_wand.jpg", content_type: "image/jpeg")
+file = File.open(Rails.root.join("db/seeds/accessories/elder_wand.png"))
+elder_wand.photo.attach(io: file, filename: "elder_wand.png", content_type: "image/png")
 
 dragon = Accessory.create!(
   owner: manu,

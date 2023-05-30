@@ -6,5 +6,5 @@ class User < ApplicationRecord
 
   has_many :accessories, foreign_key: :owner_id
   has_many :rentals, foreign_key: :renter_id
-  has_one_attached :photo
+  has_one_attached :avatar
 end
