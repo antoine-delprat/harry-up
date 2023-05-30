@@ -27,6 +27,7 @@ end
 # our own gems
 
 gem "devise"
+gem "cloudinary"
 
 group :development do
   gem "web-console"
