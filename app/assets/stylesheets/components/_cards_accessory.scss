@@ -1,0 +1,67 @@
+.cards-accessory {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-items: stretch;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+
+  a {
+    text-decoration: none;
+    background-color: #3C486B;
+    color: #FFD54C;
+
+    &:hover {
+      background-color: #FFD54C;
+      color: #3C486B;
+    }
+  }
+}
+
+
+
+
+.cards-accessory, h2 {
+  background-position: left;
+
+}
+
+.cards-accessory, h6 {
+  background-position: right;
+
+}
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .cards-accessory {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .cards-accessory {
+    grid-template-columns: 1fr;
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .cards-accessory {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .cards-accessory {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .cards-accessory {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
