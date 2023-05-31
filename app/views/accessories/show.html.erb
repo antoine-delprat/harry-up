@@ -1,0 +1,34 @@
+<div class="container product">
+  <div class="row mt-4 d-flex align-items-end">
+    <div class="col-8">
+      <h1 class="product-name"><%= @accessory.name %></h1>
+      <p class="product-username"><%= @accessory.owner.username %> - <%= @accessory.owner.city %></p>
+      <%= cl_image_tag @accessory.photo.key, height: 350, crop: :fit %>
+    </div>
+    <div class="col-4">
+      <div class="text-center">
+        <h1 class="mb-5 product-price"><%= @accessory.price_per_day %>$ / day</h1>
+        <%= simple_form_for [@accessory, @rental] do |f| %>
+          <div class="row mb-5">
+            <div class="col-6">
+              <%= f.input :start_date, as: :date, html5: true %>
+            </div>
+            <div class="col-6">
+              <%= f.input :end_date, as: :date, html5: true %>
+            </div>
+          </div>
+          <%= f.submit "Rent", class: "btn btn-primary btn-lg btn-block btn-product-rent" %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+  <div class="mt-5 mb-5">
+    <h3>Details</h3>
+    <p><%= @accessory.detail %></p>
+  </div>
+  <%= link_to accessories_path do %>
+    <div class="product-page-card-category mb-5" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://sortiesanantes.com/storage/poudlardd.jpg)">
+    See more <%= @accessory.category %>
+    </div>
+  <% end %>
+</div>
