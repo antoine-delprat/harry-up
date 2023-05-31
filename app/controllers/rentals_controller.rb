@@ -1,6 +1,10 @@
 class RentalsController < ApplicationController
   before_action :set_accessory, only: :create
 
+  def index
+    @rentals = current_user.rentals
+  end
+
   def create
     @rental = Rental.new(rental_params)
     @rental.accessory = @accessory
