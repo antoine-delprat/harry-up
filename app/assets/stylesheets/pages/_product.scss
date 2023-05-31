@@ -8,21 +8,29 @@ body {
   }
 
   h1.product-name {
-    font-family: $headers-font;
     font-size: 4rem;
   }
 
-  .product-price, h3 {
-    font-family: $headers-font;
+  p.product-price {
+    font-size: 2.3rem;
+  }
+
+  h3 {
     font-size: 3rem;
   }
 
-  form {
-    font-family: $headers-font;
+  label {
+    font-size: 1.5rem;
   }
 
-  label {
-    font-size: 2rem;
+  @media(max-width: 1200px) {
+    .product-image {
+      max-width: 630px;
+    }
+  }
+
+  a.see-more {
+    display: contents;
   }
 
 }
@@ -30,32 +38,44 @@ body {
 
 .product-username {
   color: #FFB84C;
+  margin-left: 20px;
 }
 
 .btn-product-rent {
   width: 160px;
-  background-color: #3C486B;
-  border-color: #3C486B;
-  font-size: 2rem;
+  font-family: $headers-font;
+  background-color: black;
+  color: white;
+  font-size: 2.2rem;
+  border-color: black;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition-duration: 0.3s;
   &:hover {
-    background-color: #2f3854;
+    background-color: black;
+    border-color: black;
     color: #ffd54c;
-    border-color: #2f3854;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
   }
 }
 
 .product-page-card-category {
-  background-size: cover;
-  background-position: center;
-  height: 180px;
+  background-color: white;
+  height: 60px;
+  width: 220px;
+  margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
-  font-size: 4rem;
+  color: black;
+  border: solid 1px black;
+  font-size: 2rem;
   font-family: $headers-font;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   text-decoration: none;
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  transition-duration: 0.3s;
+
+  &:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
 }
