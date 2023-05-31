@@ -9,7 +9,15 @@
           <div class="d-flex justify-content-between">
             <p><strong><%= "From" %></strong><%="  #{rental.start_date.strftime("%d/%m/%Y")}  " %><strong><%= "to" %></strong><%="  #{rental.end_date.strftime("%d/%m/%Y")}  " %></p>
             <p><strong><%= "#{rental.final_price} $" %></strong></p>
-            <p><strong><%= "#{rental.status}" %></strong></p>
+            <p>
+            <% if rental.status == "Accepted" %>
+              <i class="fa-regular fa-circle-check"></i>
+            <% elsif rental.status == "Rejected" %>
+              <i class="fa-regular fa-circle-xmark"></i>
+            <% elsif rental.status == "Pending" %>
+              <i class="fa-solid fa-arrows-rotate"></i>
+            <% end %>
+            </p>
           </div>
       </div>
     </div>
