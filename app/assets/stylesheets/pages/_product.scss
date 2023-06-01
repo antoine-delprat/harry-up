@@ -1,5 +1,6 @@
 body {
-  background-color: white;
+  background-color: #121212;
+  color: white;
 }
 
 .container.product {
@@ -23,6 +24,13 @@ body {
     font-size: 1.5rem;
   }
 
+  span[data-price-calculation-target="final"] {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    color: #ffd54c;
+  }
+
   @media(max-width: 1200px) {
     .product-image {
       max-width: 630px;
@@ -37,38 +45,37 @@ body {
 
 
 .product-username {
-  color: #FFB84C;
+  color: #ffd54c;
   margin-left: 20px;
 }
 
 .btn-product-rent {
   width: 160px;
   font-family: $headers-font;
-  background-color: black;
-  color: white;
+  background-color: #ffd54c;
+  color: black;
   font-size: 2.2rem;
-  border-color: black;
+  border-color: #ffd54c;
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
   transition-duration: 0.3s;
   &:hover {
     background-color: black;
     border-color: black;
     color: #ffd54c;
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 9px 1px rgba(255, 255, 255, 0.49);
   }
 }
 
 .product-page-card-category {
-  background-color: white;
+  background-color: transparent;
   height: 60px;
   width: 220px;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: black;
-  border: solid 1px black;
+  color: white;
+  border: solid 1px white;
   font-size: 2rem;
   font-family: $headers-font;
   text-decoration: none;
@@ -76,6 +83,7 @@ body {
   transition-duration: 0.3s;
 
   &:hover {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-color: #ffd54c;
+    color: #ffd54c;
   }
 }

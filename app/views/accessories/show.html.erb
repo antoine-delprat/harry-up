@@ -7,18 +7,19 @@
       </div>
       <%= cl_image_tag @accessory.photo.key, height: 350, width: 700, crop: :limit, class: "product-image" %>
     </div>
-    <div class="col-4">
+    <div class="col-4" data-controller="price-calculation">
       <div class="text-center">
         <p class="mb-4 product-price"><%= @accessory.price_per_day %>$ / day</p>
         <%= simple_form_for [@accessory, @rental] do |f| %>
-          <div class="row mb-4">
+          <div class="row mb-1">
             <div class="col-6">
-              <%= f.input :start_date, as: :date, html5: true %>
+              <%= f.input :start_date, as: :date, html5: true, input_html:{'data-price-calculation-target':'start', 'data-action':'change->price-calculation#calculation'} %>
             </div>
             <div class="col-6">
-              <%= f.input :end_date, as: :date, html5: true %>
+              <%= f.input :end_date, as: :date, html5: true, input_html:{'data-price-calculation-target':'end', 'data-action':'change->price-calculation#calculation'} %>
             </div>
           </div>
+          <span data-value='<%= @accessory.price_per_day %>' data-price-calculation-target='final' >0$</span>
           <%= f.submit "Book", class: "btn btn-primary btn-lg btn-block btn-product-rent" %>
         <% end %>
       </div>
