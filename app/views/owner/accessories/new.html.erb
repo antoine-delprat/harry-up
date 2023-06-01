@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="mx-auto col-6 mt-5 mb-5">
+    <%= simple_form_for [:owner, @accessory] do |f| %>
+          <div class="form-inputs">
+            <%= f.input :name %>
+            <%= f.input :detail %>
+            <%= f.input :price_per_day %>
+            <%= f.input :category,
+                        collection: [ "Wands", "Brooms", "Animals", "Others"]%>
+            <%= f.input :photo, as: :file %>
+          </div>
+          <div class="row">
+            <%= f.button :submit, "Add", class:'btn-new-product mx-auto mt-3' %>
+          </div>
+    <% end %>
+  </div>
+</div>
