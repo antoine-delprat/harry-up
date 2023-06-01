@@ -1,0 +1,6 @@
+<h1 class= "ps-2">My accessories</h1>
+
+  <% @accessories.each do |accessory| %>
+      <h2><%= accessory.category%></h2>
+        <p><%= "#{accessory.name}" %></p>
+  <% end %>
