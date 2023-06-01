@@ -19,7 +19,7 @@
               <%= f.input :end_date, as: :date, html5: true, input_html:{'data-price-calculation-target':'end', 'data-action':'change->price-calculation#calculation'} %>
             </div>
           </div>
-          <span data-value='<%= @accessory.price_per_day %>' data-price-calculation-target='final' >0$</span>
+          <span data-value='<%= @accessory.price_per_day %>' data-price-calculation-target='final' >pick dates 🪄</span>
           <%= f.submit "Book", class: "btn btn-primary btn-lg btn-block btn-product-rent" %>
         <% end %>
       </div>
