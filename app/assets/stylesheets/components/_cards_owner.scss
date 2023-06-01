@@ -1,0 +1,15 @@
+
+.cards-owner-infos {
+  width: 400px;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: $headers-color;
+  border-width: 1px;
+}
+
+.row-owner {
+  padding: 20px;
+  display: flex;
+}
