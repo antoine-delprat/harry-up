@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: #3C486B;
+  background: #0c0c0c;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -12,22 +12,17 @@
 }
 
 .nav-link {
-  color: #FFB84C;
-}
-
-.nav-link:hover {
   color: white;
-}
-
-.h3 {
-  color: #FFB84C;
+  &:hover {
+    color: #ffd54c;
+  }
 }
 
 .navbar-brand {
   font-family: $headers-font;
-  font-size: 23px;
-  color: #FFB84C;
-}
-.navbar-brand:hover {
-  color: white;
+  font-size: 26px;
+  color: #ffd54c;
+  &:hover {
+    color: #ffd54c;
+  }
 }
