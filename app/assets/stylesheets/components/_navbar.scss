@@ -22,3 +22,12 @@
 .h3 {
   color: #FFB84C;
 }
+
+.navbar-brand {
+  font-family: $headers-font;
+  font-size: 23px;
+  color: #FFB84C;
+}
+.navbar-brand:hover {
+  color: white;
+}
