@@ -1,7 +1,6 @@
 class AccessoriesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
-
   def index
     @accessories = Accessory.all
     if params[:query].present?
