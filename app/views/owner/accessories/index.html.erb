@@ -1,6 +1,25 @@
-<h1 class= "ps-2">My accessories</h1>
+<div class="row-owner">
+<h1 class= "ps-2 mt-2 flex-grow-1">My accessories</h1>
+<%= link_to "Add an accessory", new_owner_accessory_path, class: "product-page-card-category" %>
+</div>
 
+
+<div class="container ps-2">
   <% @accessories.each do |accessory| %>
-      <h2><%= accessory.category%></h2>
-        <p><%= "#{accessory.name}" %></p>
+    <h2><%= accessory.category %></h2>
+  <div class="row">
+    <div class="col">
+      <div>
+        <%= cl_image_tag accessory.photo.key, height: 300, width: 400, crop: :fill %>
+          <div class="cards-owner-infos">
+            <h3><%= "#{accessory.name}" %></h3>
+            <h3><%= "#{accessory.price_per_day}$" %></h3>
+          </div>
+      </div>
+    </div>
   <% end %>
+  </div>
+</div>
+
+<%# créér nom manuellement %>
+<%# boucler avec if si nom pousser les infos  %>
