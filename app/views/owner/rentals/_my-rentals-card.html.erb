@@ -1,0 +1,37 @@
+
+<div class="cards my-rentals-card p-5" >
+  <% @rentals.each do |rental| %>
+    <div class="border border-secondary-subtle border-1 rounded-3">
+      <% if rental.status == "Pending" %>
+        <div class="card-category my-rentals-card-category opacity-50" href="#" style="background-image: linear-gradient(rgba(0,0,0,0.3),
+        rgba(0,0,0,0.3)), url(<%= cl_image_path(rental.accessory.photo.key) %>)">
+        <%= link_to accept_owner_rental_path(rental), data:{turbo_method: "patch"} do %>
+          <i class="fa-regular fa-circle-check text-white bg-success p-1 rounded"></i>
+        <% end %>
+        <%= link_to decline_owner_rental_path(rental), data:{turbo_method: "patch"} do %>
+          <i class="fa-regular fa-circle-xmark text-white bg-danger p-1 rounded"></i>
+        <% end %>
+      <% else %>
+        <div class="card-category my-rentals-card-category" href="#" style="background-image: linear-gradient(rgba(0,0,0,0.3),
+        rgba(0,0,0,0.3)), url(<%= cl_image_path(rental.accessory.photo.key) %>)">
+      <% end %>
+      </div>
+      <div class="px-2" style="background:#3C486B">
+        <div class="d-flex justify-content-between align-items-center py-2 " id="style">
+          <h2><%= "#{rental.accessory.name}" %></h2>
+          <p><strong><%= "#{rental.final_price} $" %></strong></p>
+        </div>
+        <div class="d-flex justify-content-between">
+          <p class="text-white"><strong><%= "#{rental.start_date.strftime("%d/%m/%Y")}" %></strong><%= "     -     " %><strong><%= "#{rental.end_date.strftime("%d/%m/%Y")}" %></strong></p>
+          <% if rental.status == "Accepted" %>
+            <p class="text-success"><%= rental.status %> <i class="fa-regular fa-circle-check"></i></p>
+          <% elsif rental.status == "Rejected" %>
+            <p class="text-danger"><%= rental.status %> <i class="fa-regular fa-circle-xmark"></i></p>
+          <% elsif rental.status == "Pending" %>
+            <p class="text-warning"><%= rental.status %> <i class="fa-solid fa-arrows-rotate"></i></p>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
