@@ -26,3 +26,16 @@
     color: #ffd54c;
   }
 }
+
+.navbar .dropdown-menu {
+  background-color: #0c0c0c;
+
+  .dropdown-item {
+    color: white;
+
+    &:hover {
+      background-color: #ffd54c;
+      color: #0c0c0c;
+    }
+  }
+}
