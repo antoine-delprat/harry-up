@@ -4,12 +4,12 @@
 <!-- TODO: Insert inside the `.container`, above the first `.row` -->
 
 <div class="row justify-content-center">
-  <div class="col-sm-8 my-3">
+  <div class="col-sm-8 my-3 mt-5 mb-5">
       <%= form_with url: accessories_path, method: :get, class: "d-flex" do %>
         <%= text_field_tag :query,
               params[:query],
               class: "form-control",
-              placeholder: "Type a keyword"
+              placeholder: "Wands, brooms, animals..."
           %>
             <%= submit_tag "Search", name: "", class: "btn btn-search" %>
       <% end %>
@@ -18,24 +18,24 @@
 <!-- [...] -->
 
 
-<ul>
-    <%= link_to "Animals", accessories_path(category: "Animals"), class: "btn Animals-ghost" %>
+<ul class="d-flex mb-5 pl-0 ul-accessory-list">
+    <%= link_to "All", accessories_path(accessory: "name"), class: "btn btn-ghost" %>
+    <%= link_to "Animals", accessories_path(category: "Animals"), class: "btn btn-ghost" %>
     <%= link_to "Brooms", accessories_path(category: "Brooms"), class: "btn btn-ghost" %>
     <%= link_to "Wands", accessories_path(category: "Wands"), class: "btn btn-ghost" %>
     <%= link_to "Others", accessories_path(category: "Others"), class: "btn btn-ghost" %>
-    <%= link_to "All", accessories_path(accessory: "name"), class: "btn btn-ghost" %>
 </ul>
 
 
 
-<div class="cards-accessory">
+<div class="cards-accessory mb-5">
     <% @accessories.each do |accessory| %>
-      <%= link_to accessory_path(accessory) do %>
-          <%= cl_image_tag accessory.photo.key, height: 300, width: 400, crop: :fill %>
-              <div class="card-product-infos">
-                <h2><%= accessory.name %></h2>
-                <h6><%= accessory.price_per_day %> $</h6>
+        <%= link_to accessory_path(accessory) do %>
+            <%= cl_image_tag accessory.photo.key, height: 300, width: 400, crop: :fill %>
+            <div class="card-product-infos">
+              <h2><%= accessory.name %></h2>
+              <p class="mt-1"><strong><%= accessory.price_per_day %> $</strong></p>
             </div>
-      <% end %>
+        <% end %>
     <% end %>
 </div>
