@@ -4,26 +4,28 @@
   justify-content: space-around;
   align-items: stretch;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 30px;
 
   a {
     text-decoration: none;
-    background-color: #3C486B;
     color: #FFD54C;
+    border: 1px solid #FFD54C;
+    background-color: #0c0c0c;
 
     &:hover {
       background-color: #FFD54C;
-      color: #3C486B;
+      color: black;
+      box-shadow: 0 0px 15px 7px rgba(255, 255, 255, 0.49);
     }
   }
 }
 
-.cards-accessory, h2 {
+.cards-accessory h2 {
   background-position: left;
 
 }
 
-.cards-accessory, h6 {
+.cards-accessory p {
   background-position: right;
 
 }
