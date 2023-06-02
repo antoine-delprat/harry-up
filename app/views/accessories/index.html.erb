@@ -11,8 +11,7 @@
               class: "form-control",
               placeholder: "Type a keyword"
           %>
-        <%= submit_tag "Search", name: "", class: "btn btn-primary" %>
-
+            <%= submit_tag "Search", name: "", class: "btn btn-search" %>
       <% end %>
   </div>
 </div>
@@ -20,10 +19,11 @@
 
 
 <ul>
-    <%= link_to "Animals", accessories_path(category: "Animals"), class: "btn btn-ghost" %>
+    <%= link_to "Animals", accessories_path(category: "Animals"), class: "btn Animals-ghost" %>
     <%= link_to "Brooms", accessories_path(category: "Brooms"), class: "btn btn-ghost" %>
     <%= link_to "Wands", accessories_path(category: "Wands"), class: "btn btn-ghost" %>
     <%= link_to "Others", accessories_path(category: "Others"), class: "btn btn-ghost" %>
+    <%= link_to "All", accessories_path(accessory: "name"), class: "btn btn-ghost" %>
 </ul>
 
 
