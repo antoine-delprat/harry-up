@@ -3,23 +3,22 @@
 <%= link_to "Add an accessory", new_owner_accessory_path, class: "product-page-card-category" %>
 </div>
 
-
 <div class="container ps-2">
-  <% @accessories.each do |accessory| %>
-    <h2><%= accessory.category %></h2>
-  <div class="row">
-    <div class="col">
-      <div>
-        <%= cl_image_tag accessory.photo.key, height: 300, width: 400, crop: :fill, class: "border border-secondary-subtle border-1 rounded-3" %>
-          <div class="cards-owner-infos">
-            <h3><%= "#{accessory.name}" %></h3>
-            <h3 class="cards-owner-infos-pricing"><%= "#{accessory.price_per_day} $" %></h3>
-          </div>
-      </div>
-    </div>
+  <% Accessory::CATEGORIES.each do |category| %>
+    <% items = Accessory.where(category: category, owner: current_user) %>
+    <% unless items.empty? %>
+      <h2 class="h2-category"><%= category %></h2>
+      <% items.each do |item|  %>
+        <div class="col-owner">
+            <div class="cards-owner">
+              <%= cl_image_tag item.photo.key, height: 300, width: 400, crop: :fill%>
+              <div class="cards-owner-infos">
+                <h3><%= "#{item.name}" %></h3>
+                <h3 class="cards-owner-infos-pricing"><%= "#{item.price_per_day} $" %></h3>
+              </div>
+            </div>
+        </div>
+      <% end %>
+    <% end %>
   <% end %>
-  </div>
 </div>
-
-<%# créér nom manuellement %>
-<%# boucler avec if si nom pousser les infos  %>

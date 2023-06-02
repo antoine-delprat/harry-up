@@ -1,12 +1,22 @@
 
-.cards-owner-infos {
+.col-owner {
+  margin: 10px;
+}
+
+.cards-owner {
+  overflow: hidden;
   width: 400px;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+.cards-owner-infos {
+  width: 400px ;
   padding: 16px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   color: $headers-color;
-  border-width: 1px;
 }
 
 .cards-owner-infos-pricing {
@@ -17,4 +27,8 @@
 .row-owner {
   padding: 20px;
   display: flex;
+}
+
+.h2-category {
+  padding: 10px;
 }
