@@ -6,29 +6,39 @@
 .cards-owner {
   overflow: hidden;
   width: 400px;
-  border: 1px solid white;
-  border-radius: 3px;
+  border: 1px solid #FFD54C;
 }
 
 .cards-owner-infos {
   width: 400px ;
   padding: 16px;
+  padding-top: 20px;
+  padding-bottom: 12px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
   color: $headers-color;
+  border-top: 1px solid #FFD54C;
+}
+
+.cards-owner-infos-name {
+  font-size: 2.2rem;
+  color: #FFD54C;
 }
 
 .cards-owner-infos-pricing {
   font-family: Helvetica;
-  font-size: 20px;
+  font-size: 1.5rem;
+  color: #FFD54C;
 }
 
 .row-owner {
   padding: 20px;
+  padding-bottom: 0px;
   display: flex;
 }
 
 .h2-category {
   padding: 10px;
+  margin-top: 50px;
 }

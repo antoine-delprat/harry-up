@@ -3,7 +3,7 @@
 <%= link_to "Add an accessory", new_owner_accessory_path, class: "product-page-card-category" %>
 </div>
 
-<div class="container ps-2">
+<div class="container ps-2 mb-5">
   <% Accessory::CATEGORIES.each do |category| %>
     <% items = Accessory.where(category: category, owner: current_user) %>
     <% unless items.empty? %>
@@ -13,8 +13,8 @@
             <div class="cards-owner">
               <%= cl_image_tag item.photo.key, height: 300, width: 400, crop: :fill%>
               <div class="cards-owner-infos">
-                <h3><%= "#{item.name}" %></h3>
-                <h3 class="cards-owner-infos-pricing"><%= "#{item.price_per_day} $" %></h3>
+                <h3 class="cards-owner-infos-name"><%= "#{item.name}" %></h3>
+                <p class="cards-owner-infos-pricing"><strong><%= "#{item.price_per_day} $" %></strong></p>
               </div>
             </div>
         </div>
