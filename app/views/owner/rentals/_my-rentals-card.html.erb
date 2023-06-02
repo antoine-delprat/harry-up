@@ -5,18 +5,18 @@
       <% if rental.status == "Pending" %>
         <div class="card-category my-rentals-card-category opacity-50" href="#" style="background-image: linear-gradient(rgba(0,0,0,0.3),
         rgba(0,0,0,0.3)), url(<%= cl_image_path(rental.accessory.photo.key) %>)">
-        <%= link_to accept_owner_rental_path(rental), data:{turbo_method: "patch"} do %>
-          <i class="fa-regular fa-circle-check text-white bg-success p-1 rounded"></i>
-        <% end %>
-        <%= link_to decline_owner_rental_path(rental), data:{turbo_method: "patch"} do %>
-          <i class="fa-regular fa-circle-xmark text-white bg-danger p-1 rounded"></i>
-        <% end %>
+          <%= link_to accept_owner_rental_path(rental), class:"bgaccept", data:{turbo_method: "patch"} do %>
+            <p class="align">Accept</p>
+          <% end %>
+          <%= link_to decline_owner_rental_path(rental), class:"bgdecline", data:{turbo_method: "patch"} do %>
+            <p class="align">Decline</p>
+          <% end %>
       <% else %>
         <div class="card-category my-rentals-card-category" href="#" style="background-image: linear-gradient(rgba(0,0,0,0.3),
         rgba(0,0,0,0.3)), url(<%= cl_image_path(rental.accessory.photo.key) %>)">
       <% end %>
       </div>
-      <div class="px-2" style="background:#3C486B">
+      <div class="px-2" style="background:#0c0c0c">
         <div class="d-flex justify-content-between align-items-center py-2 " id="style">
           <h2><%= "#{rental.accessory.name}" %></h2>
           <p><strong><%= "#{rental.final_price} $" %></strong></p>
