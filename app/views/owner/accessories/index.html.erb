@@ -7,9 +7,9 @@
   <% Accessory::CATEGORIES.each do |category| %>
     <% items = Accessory.where(category: category, owner: current_user) %>
     <% unless items.empty? %>
-      <h2><%= category %></h2>
+      <h2 class="h2-category"><%= category %></h2>
       <% items.each do |item|  %>
-        <div class="col-owner d-flex">
+        <div class="col-owner">
             <div class="cards-owner">
               <%= cl_image_tag item.photo.key, height: 300, width: 400, crop: :fill%>
               <div class="cards-owner-infos">
