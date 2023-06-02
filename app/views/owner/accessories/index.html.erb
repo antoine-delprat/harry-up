@@ -9,8 +9,8 @@
     <h2><%= accessory.category %></h2>
   <div class="row">
     <div class="col">
-      <div>
-        <%= cl_image_tag accessory.photo.key, height: 300, width: 400, crop: :fill, class: "border border-secondary-subtle border-1 rounded-3" %>
+      <div class="cards-owner">
+        <%= cl_image_tag accessory.photo.key, height: 300, width: 400, crop: :fill %>
           <div class="cards-owner-infos">
             <h3><%= "#{accessory.name}" %></h3>
             <h3 class="cards-owner-infos-pricing"><%= "#{accessory.price_per_day} $" %></h3>

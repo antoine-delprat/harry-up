@@ -1,6 +1,12 @@
 
-.cards-owner-infos {
+.cards-owner {
   width: 400px;
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+.cards-owner-infos {
+  width: 400px ;
   padding: 16px;
   display: flex;
   justify-content: space-between;
